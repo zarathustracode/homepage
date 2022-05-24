@@ -6,16 +6,11 @@ const Navbar = () => {
   return (
     <>
         <nav>
-          <div className="flex bg-blue-800 m-4 p-4 text-center text-white">
-            <div className="flex m-2 p-2 text-center bg-blue-400">
-            <Link to="/">Home</Link>
-            </div>
-            <div className="flex m-2 p-2 text-center bg-blue-400">
-            <Link to="/lif">LIF</Link>
-            </div>
-            <div className="flex m-2 p-2 text-center bg-blue-400">
-            <Link to="/about">About</Link>
-            </div>
+          <div className="flex bg-blue-800 m-4 p-4 text-center text-white rounded-xl">
+            <Link to="/"><div className="flex m-2 p-2 text-center bg-blue-400  rounded-sm outline outline-blue-100 hover:bg-blue-200 delay-100">Home</div></Link>
+            <Link to="/lif"><div className="flex m-2 p-2 text-center bg-blue-400  rounded-sm outline outline-blue-100 hover:bg-blue-200 delay-100">LIF</div></Link>
+            <Link to="/about"><div className="flex m-2 p-2 text-center bg-blue-400  rounded-sm outline outline-blue-100 hover:bg-blue-200 delay-100">About</div></Link>
+            
           </div>
         </nav>
     </>
