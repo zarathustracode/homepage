@@ -10,7 +10,7 @@
     background-position: top;
     background-size:  ;
     background-repeat: no-repeat;
-    @apply text-white;
+    @apply text-gray-100 text-xs;
   }
 
 }

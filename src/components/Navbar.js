@@ -20,7 +20,7 @@ const Navbar = () => {
                 navigation.map(
                   (item, index) => (
                     <Link key={index} to={item.href}>
-                    <div className=" text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium hover:text-white delay-100">
+                    <div className=" text-gray-300 hover:bg-gray-700 px-3 py-2 hover:text-white delay-100">
                       {item.name}
                       </div>
                   </Link>
@@ -29,7 +29,7 @@ const Navbar = () => {
             }
 
             <Link key={navigation.length+1} to="/sign-in">
-              <div className="absolute right-0 text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium hover:text-white delay-100">
+              <div className="absolute right-0 text-gray-300 hover:bg-gray-700 px-3 py-2 text-md hover:text-white delay-100">
                 Sign In
                 </div>
             </Link>
