@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 import React from 'react'
 
-const LIF = () => {
+const NeuralResponse = () => {
 
   const [simulations, setSimulations] = useState(
     [
@@ -47,4 +47,4 @@ const LIF = () => {
   )
 }
 
-export default LIF;
+export default NeuralResponse;

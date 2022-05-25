@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 
-@layer base {
+
+@layer base{
   body {
-    @apply bg-blue-300;
+    background-image: url(./assets/images/alina-grubnyak-tEVGmMaPFXk-unsplash.jpg);
+    background-position: top;
+    background-size:  ;
+    background-repeat: no-repeat;
+    @apply text-white;
   }
-};
+
+}

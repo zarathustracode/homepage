@@ -3,15 +3,37 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [click, setclick] = useState(false)
+  const navigation = [
+    { name: 'Home', href: "/", current: true },
+    { name: 'Homeostasis', href: "/homeostasis", current: false },
+    { name: 'Graphs', href: "/graphs", current: false },
+    { name: 'Learning', href: "/learning", current: false },
+    { name: 'Correlation', href: "/correlations", current: false },
+    { name: 'Response', href: "/neural-response", current: false },
+    { name: 'About', href: "/about", current: false },
+  ]
   return (
     <>
         <nav>
-          <div className="flex bg-blue-800 m-4 p-4 text-center text-white rounded-xl">
-            <Link to="/"><div className="flex m-2 p-2 text-center bg-blue-400  rounded-sm outline outline-blue-100 hover:bg-blue-200 delay-100">Home</div></Link>
-            <Link to="/lif"><div className="flex m-2 p-2 text-center bg-blue-400  rounded-sm outline outline-blue-100 hover:bg-blue-200 delay-100">LIF</div></Link>
-            <Link to="/about"><div className="flex m-2 p-2 text-center bg-blue-400  rounded-sm outline outline-blue-100 hover:bg-blue-200 delay-100">About</div></Link>
-            
-          </div>
+          <div className="flex bg-gray-900 text-white">
+            {
+                navigation.map(
+                  (item, index) => (
+                    <Link key={index} to={item.href}>
+                    <div className=" text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium hover:text-white delay-100">
+                      {item.name}
+                      </div>
+                  </Link>
+                )
+                )
+            }
+
+            <Link key={navigation.length+1} to="/sign-in">
+              <div className="absolute right-0 text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium hover:text-white delay-100">
+                Sign In
+                </div>
+            </Link>
+            </div>
         </nav>
     </>
   )
