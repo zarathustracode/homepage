@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/homepage/static/css/main.ade5e115.css",
-    "main.js": "/homepage/static/js/main.1ad53938.js",
+    "main.css": "/homepage/static/css/main.11852e9d.css",
+    "main.js": "/homepage/static/js/main.38021a8f.js",
+    "static/media/alina-grubnyak-tEVGmMaPFXk-unsplash.jpg": "/homepage/static/media/alina-grubnyak-tEVGmMaPFXk-unsplash.635abc687c47725555a4.jpg",
+    "static/media/Lebenslauf-1.png": "/homepage/static/media/Lebenslauf-1.f3efa6d222bdcb4dfebb.png",
+    "static/media/fig_engram.png": "/homepage/static/media/fig_engram.e97f3066c2cf76e63e79.png",
     "index.html": "/homepage/index.html",
-    "main.ade5e115.css.map": "/homepage/static/css/main.ade5e115.css.map",
-    "main.1ad53938.js.map": "/homepage/static/js/main.1ad53938.js.map"
+    "main.11852e9d.css.map": "/homepage/static/css/main.11852e9d.css.map",
+    "main.38021a8f.js.map": "/homepage/static/js/main.38021a8f.js.map"
   },
   "entrypoints": [
-    "static/css/main.ade5e115.css",
-    "static/js/main.1ad53938.js"
+    "static/css/main.11852e9d.css",
+    "static/js/main.38021a8f.js"
   ]
 }
