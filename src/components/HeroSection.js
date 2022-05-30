@@ -1,26 +1,35 @@
 import Plot from 'react-plotly.js'
+import { useState, useEffect } from "react"
 
 const HeroSection = () => {
-  const neuron_parameters = {'mean': 1, 'variance': 1};
+  const [neuron_parameters, setNeurons] = useState({'mean': 0, 'variance': 1});
 
-  // fetch("http://0.0.0.0:8000/neuron", {
-  // body: JSON.stringify(neuron_parameters),
-  // headers: {
-  //   "Accept": "application/json",
-  //   "Content-Type": "application/json"
-  // },
-  // method: "POST",
-  // mode: "no-cors"}).then(response=>(console.log(response.url)));
+  const [data, setData] = useState({"membrane potential values": [], "probability distribution": [], "probability flux": []
+});
 
-  var response = fetch("http://0.0.0.0:8000/get_stationary_diststribution/random/?mean_val=0&variance_val=1", {
-  headers: {
-    "Accept": "application/json",
-  },
-  method: "GET",
-  mode: "no-cors"}).then(response => response.text()).then(data => {console.log(data)});
+  const fetchData = async () => {
+    const response = await fetch("http://ec2-35-157-18-0.eu-central-1.compute.amazonaws.com:8000/neuron",{
+      method: "POST",
+      body: JSON.stringify(neuron_parameters),
+      headers: {
+        "Content-Type": 'application/json'}})
+    const data = await response.json()
+    setData(data)
+  }
 
-  console.log(response)
-  console.log("Kurac")
+  useEffect(() => fetchData(), []);
+
+  const setMean = (e) => {
+    const newNeuron = {'mean': parseFloat(e.target.value), 'variance': data['variance']};
+    setNeurons(newNeuron);
+    fetchData();
+  }
+
+  const setVar = (e) => {
+    const newNeuron = {'mean': data['mean'], 'variance': parseFloat(e.target.value)};
+    setNeurons(newNeuron);
+    fetchData();
+  }
 
   return (
     <div className="text-center">
@@ -29,17 +38,44 @@ const HeroSection = () => {
       <Plot
         data={[
           {
-            x: [...Array(20).keys()],
-            y: [...Array(20).keys()].map(value=>value*value),
+            x: data["membrane potential values"],
+            y: data["probability distribution"],
             type: 'scatter',
             mode: 'lines+markers',
-            marker: {color: 'red'},
+            name: 'Potential',
+            marker: {color: 'red', size: 3},
+            yaxis: 'y1'
           },
-          {type: 'scatter', mode: 'lines+markers',x: [...Array(20).keys()], y: [...Array(20).keys()].map(value=>10*value-0.1*value*value)},
+          {
+            type: 'scatter',
+            mode: 'lines+markers',
+            x: data["membrane potential values"],
+            y: data["probability flux"],
+            name: "Flux",
+            marker: {size: 1},
+            yaxis: 'y2'
+          },
         ]}
-        layout={ {width: 600, height: 400, title: 'Membrane Potential', legend : { x:1, y:0 }, } }
-        config={ {scrollZoom: true, editable: true, displayModeBar: false } }
+        layout={ {
+          width: 600, height: 400,
+          title: 'Equilibrium distribution of LIF neuron',
+          xaxis: {title: "Membrane Potential", showgrid: false, zeroline: false},
+          yaxis: {title: "Probability", showgrid: false, zeroline: false},
+          yaxis2: {title: "Flux", showgrid: false, zeroline: false, side: 'right',overlaying: 'y'},
+          legend : { x:1, y:0 }, } }
+        config={ {scrollZoom: true, editable: true, displayModeBar: false, responsive: true } }
       />
+      <form>
+        <label>
+          Mean:
+          <input className= "text-black" type="number" value={neuron_parameters['mean']} onChange={e => setMean(e)}/>
+        </label>
+        <label>
+          Variance:
+          <input className= "text-black" type="number" value={neuron_parameters['variance']} onChange={e => setVar(e)}/>
+        </label>
+      </form>
+
     </div>
   )
 }
