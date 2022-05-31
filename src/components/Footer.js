@@ -3,14 +3,11 @@ const Footer = () => {
     <div>
       <section className='text-center'>
         <p>
-        Join the AI FOR EVERYONE newsletter to receive our best offers
-        </p>
-        <p>
-        You can unsubscribe at any time
+        Join my personal newsletter
         </p>
         <div>
           <form>
-            <input name='email' placeholder="Your Email"/>
+            <input className="text-center" placeholder="Your Email"/>
           </form>
         </div>
         <small>Nebojša Gašparović © 2021</small>

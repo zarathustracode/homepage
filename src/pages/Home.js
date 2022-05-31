@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <Cards />
+      <Cards title='Check out my portfolio' />
       <Footer />
     </>
   )

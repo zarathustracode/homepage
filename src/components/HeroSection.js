@@ -1,80 +1,39 @@
-import Plot from 'react-plotly.js'
-import { useState, useEffect } from "react"
-
 const HeroSection = () => {
-  const [neuron_parameters, setNeurons] = useState({'mean': 0, 'variance': 1});
-
-  const [data, setData] = useState({"membrane potential values": [], "probability distribution": [], "probability flux": []
-});
-
-  const fetchData = async () => {
-    const response = await fetch("http://ec2-35-157-18-0.eu-central-1.compute.amazonaws.com:8000/neuron",{
-      method: "POST",
-      body: JSON.stringify(neuron_parameters),
-      headers: {
-        "Content-Type": 'application/json'}})
-    const data = await response.json()
-    setData(data)
-  }
-
-  useEffect(() => fetchData(), []);
-
-  const setMean = (e) => {
-    const newNeuron = {'mean': parseFloat(e.target.value), 'variance': data['variance']};
-    setNeurons(newNeuron);
-    fetchData();
-  }
-
-  const setVar = (e) => {
-    const newNeuron = {'mean': data['mean'], 'variance': parseFloat(e.target.value)};
-    setNeurons(newNeuron);
-    fetchData();
-  }
 
   return (
-    <div className="text-center">
-      <h1>AI IS FOR EVERYONE</h1>
-      <p>Join the AI revolution!</p>
-      <Plot
-        data={[
-          {
-            x: data["membrane potential values"],
-            y: data["probability distribution"],
-            type: 'scatter',
-            mode: 'lines+markers',
-            name: 'Potential',
-            marker: {color: 'red', size: 3},
-            yaxis: 'y1'
-          },
-          {
-            type: 'scatter',
-            mode: 'lines+markers',
-            x: data["membrane potential values"],
-            y: data["probability flux"],
-            name: "Flux",
-            marker: {size: 1},
-            yaxis: 'y2'
-          },
-        ]}
-        layout={ {
-          width: 600, height: 400,
-          title: 'Equilibrium distribution of LIF neuron',
-          xaxis: {title: "Membrane Potential", showgrid: false, zeroline: false},
-          yaxis: {title: "Probability", showgrid: false, zeroline: false},
-          yaxis2: {title: "Flux", showgrid: false, zeroline: false, side: 'right',overlaying: 'y'},
-          legend : { x:1, y:0 }, } }
-        config={ {scrollZoom: true, editable: true, displayModeBar: false, responsive: true } }
-      />
-      <form>
-        <label>
-          Mean:
-          <input className= "text-black" type="number" value={neuron_parameters['mean']} onChange={e => setMean(e)}/>
-        </label>
-        <label>
-          Variance:
-          <input className= "text-black" type="number" value={neuron_parameters['variance']} onChange={e => setVar(e)}/>
-        </label>
-      </form>
+    <div className="relative text-center text-white p-4 m-4">
+      <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+            <div className="sm:text-center lg:text-left">
+              <h1 className="text-4xl tracking-tight font-extrabold text-gray-500 sm:text-5xl md:text-6xl">
+                <span className="block xl:inline">From hypothesis to</span>{' '}
+                <span className="block text-blue-900 xl:inline">deployment</span>
+              </h1>
+              <p className="mt-3 text-base text-violet-800 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              Researcher with an extensive experience in Python (1000+ lines of code) and a solid background in theoretical neuroscience. 
+              Enthusiastic about the application of machine learning to the real world problems.
+
+              </p>
+              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                <div className="rounded-md shadow">
+                  <a
+                    href="#"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  >
+                    Get started
+                  </a>
+                </div>
+                <div className="mt-3 sm:mt-0 sm:ml-3">
+                  <a
+                    href="#"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                  >
+                    Live demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </main>
+      
 
     </div>
   )

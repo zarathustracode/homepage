@@ -6,11 +6,11 @@
 
 @layer base{
   body {
-    background-image: url(./assets/images/alina-grubnyak-tEVGmMaPFXk-unsplash.jpg);
+    //background-image: url(./assets/images/alina-grubnyak-tEVGmMaPFXk-unsplash.jpg);
     background-position: top;
     background-size:  ;
     background-repeat: no-repeat;
-    @apply text-gray-100 text-xs;
+    @apply text-blue-700 text-2xl;
   }
 
 }
