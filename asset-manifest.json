@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/homepage/static/css/main.d1810590.css",
-    "main.js": "/homepage/static/js/main.d051101c.js",
+    "main.css": "/homepage/static/css/main.310e0331.css",
+    "main.js": "/homepage/static/js/main.1c5d26fb.js",
     "static/media/alina-grubnyak-tEVGmMaPFXk-unsplash.jpg": "/homepage/static/media/alina-grubnyak-tEVGmMaPFXk-unsplash.635abc687c47725555a4.jpg",
     "static/media/Lebenslauf-1.png": "/homepage/static/media/Lebenslauf-1.f3efa6d222bdcb4dfebb.png",
     "static/media/fig_learning.png": "/homepage/static/media/fig_learning.f2aebf067c296ba95326.png",
@@ -9,11 +9,11 @@
     "static/media/fig_oscillations.png": "/homepage/static/media/fig_oscillations.a4f6eb38d5502d810a2f.png",
     "static/media/fig_engram.png": "/homepage/static/media/fig_engram.e97f3066c2cf76e63e79.png",
     "index.html": "/homepage/index.html",
-    "main.d1810590.css.map": "/homepage/static/css/main.d1810590.css.map",
-    "main.d051101c.js.map": "/homepage/static/js/main.d051101c.js.map"
+    "main.310e0331.css.map": "/homepage/static/css/main.310e0331.css.map",
+    "main.1c5d26fb.js.map": "/homepage/static/js/main.1c5d26fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1810590.css",
-    "static/js/main.d051101c.js"
+    "static/css/main.310e0331.css",
+    "static/js/main.1c5d26fb.js"
   ]
 }
