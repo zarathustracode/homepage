@@ -5,7 +5,7 @@ import pic3 from "../assets/images/fig_oscillations.png"
 
 const Cards = () => {
   return (
-    <div className='text-center'>
+    <div className='mt-20'>
       <div className="lg:text-center">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Portfolio</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
