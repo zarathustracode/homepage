@@ -1,30 +1,30 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import { UsersIcon, GlobeAltIcon, ChartPieIcon, LightBulbIcon } from '@heroicons/react/outline';
 
 const features = [
   {
-    name: 'Competitive exchange rates',
+    name: 'Webb apps',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
+      "Deploying a full-stack machine learning web application using FastApi, Postgres, React, Docker and Kubernetes. ",
+      icon: GlobeAltIcon,
   },
   {
-    name: 'No hidden fees',
+    name: 'Fundamental reserach',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
+      'Creating mathematical theory of dynamic graphs and adding machine learning capabilities with Pytorch.',
+    icon: LightBulbIcon,
   },
   {
-    name: 'Transfers are instant',
+    name: 'Data analysis',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
+      'Analysis and visualization of high-dimensional time series data with Python/Pytorch (ARIMA-GARCH, LSTM, XGBoost, GPT, BERT, PPO2, NLopt).',
+    icon: ChartPieIcon,
   },
   {
-    name: 'Mobile notifications',
+    name: 'Communication skills',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
+      'Tutoring undergraduate and graduate students, giving technical presentation and publishing in a peer-reviewed journals.',
+    icon: UsersIcon,
   },
 ]
 
@@ -33,13 +33,12 @@ export default function Features() {
     <div className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Transactions</h2>
+          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Skills</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            A better way to send money
+            Programming and Science
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-            accusamus quisquam.
+          Modern full stack application which will bring your data to life.
           </p>
         </div>
 
