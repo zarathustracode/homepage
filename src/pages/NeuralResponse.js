@@ -2,7 +2,6 @@ import Plot from 'react-plotly.js'
 import { useState, useEffect } from "react"
 import Simulations from "../components/Simulations";
 import Header from "../components/Header";
-
 import React from 'react'
 
 const NeuralResponse = () => {
@@ -37,8 +36,9 @@ const NeuralResponse = () => {
 
   const [neuron_parameters, setNeurons] = useState({'mean': 0, 'variance': 1});
 
-  const [data, setData] = useState({"membrane potential values": [], "probability distribution": [], "probability flux": []
-});
+  const initialData = require('./../assets/response_data.json');
+
+  const [data, setData] = useState(initialData);
 
   const fetchData = async () => {
     const response = await fetch("http://ec2-35-157-18-0.eu-central-1.compute.amazonaws.com:8000/neuron",{
@@ -47,7 +47,8 @@ const NeuralResponse = () => {
       headers: {
         "Content-Type": 'application/json'}})
     const data = await response.json()
-    setData(data)
+    if (data.ok){
+      setData(data);}
   }
 
   useEffect(() => fetchData(), []);
@@ -110,11 +111,11 @@ const NeuralResponse = () => {
           </label>
         </form>
       </div>
-      <div>
+      {/* <div>
         <Header title= 'Leaky-integrate-and-fire'/>
         <h1 className='text-3xl font-sans'> Simple frontend </h1>
         {simulations.length > 0 ? <Simulations simulations={simulations} onDelete={deleteTask}/> : 'No simulations were run!'}
-      </div>
+      </div> */}
     </>
   )
 }

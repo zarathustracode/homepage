@@ -35,7 +35,7 @@ export default function Features() {
         <div className="lg:text-center">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Skills</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Programming and Science
+            Programming and science
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
           Modern full stack application which will bring your data to life.
