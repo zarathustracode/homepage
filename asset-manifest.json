@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/homepage/static/css/main.4500b988.css",
-    "main.js": "/homepage/static/js/main.31c7cdd7.js",
+    "main.js": "/homepage/static/js/main.c766cbe2.js",
     "static/media/fig_learning.png": "/homepage/static/media/fig_learning.f2aebf067c296ba95326.png",
     "static/media/fig_limit-cycle.png": "/homepage/static/media/fig_limit-cycle.5769bb3c5c8b955b43b8.png",
     "static/media/fig_oscillations.png": "/homepage/static/media/fig_oscillations.a4f6eb38d5502d810a2f.png",
     "static/media/fig_engram.png": "/homepage/static/media/fig_engram.e97f3066c2cf76e63e79.png",
     "index.html": "/homepage/index.html",
     "main.4500b988.css.map": "/homepage/static/css/main.4500b988.css.map",
-    "main.31c7cdd7.js.map": "/homepage/static/js/main.31c7cdd7.js.map"
+    "main.c766cbe2.js.map": "/homepage/static/js/main.c766cbe2.js.map"
   },
   "entrypoints": [
     "static/css/main.4500b988.css",
-    "static/js/main.31c7cdd7.js"
+    "static/js/main.c766cbe2.js"
   ]
 }
