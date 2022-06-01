@@ -92,13 +92,15 @@ const NeuralResponse = () => {
             },
           ]}
           layout={ {
-            width: 600, height: 400,
+            autosize: true,
             title: 'Equilibrium distribution of LIF neuron',
             xaxis: {title: "Membrane Potential", showgrid: false, zeroline: false},
             yaxis: {title: "Probability", showgrid: false, zeroline: false},
             yaxis2: {title: "Flux", showgrid: false, zeroline: false, side: 'right',overlaying: 'y'},
             legend : { x:1, y:0 }, } }
-          config={ {scrollZoom: true, editable: true, displayModeBar: false, responsive: true } }
+          config={ {scrollZoom: true, editable: true, displayModeBar: false, responsive: true} }
+          useResizeHandler={true}
+          style={{width: '100%', height: '100%'}}
         />
         <form>
           <label>
