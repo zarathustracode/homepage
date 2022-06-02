@@ -75,7 +75,7 @@ const NeuralResponse = () => {
         </h1>
         <br></br>
         <p className="text-lg text-gray-900">
-        Even the best algorithms developed by scientists have a long way to go. 
+        Even the best algorithms developed by scientists have a long way to go till real world application. 
         Fortunately, today there are many tools that shorten that path.
         On this page I will demonstrate how to implement a fast algorithm to calculate the response of a biological neuron. 
         The implementation will be in <span className="font-bold text-black">Python</span> and <span className="font-bold text-black">C ++</span>. 
