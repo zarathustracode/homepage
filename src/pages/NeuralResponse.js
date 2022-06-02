@@ -80,7 +80,7 @@ const NeuralResponse = () => {
         On this page I will demonstrate how to implement a fast algorithm to calculate the response of a biological neuron. 
         The implementation will be in <span className="font-bold text-black">Python</span> and <span className="font-bold text-black">C ++</span>. 
         We will then make an endpoint API using <span className="font-bold text-black">FastAPI</span>. Finally, we will visualize the results using the <span className="font-bold text-black">plotly.js</span> library.
-        You can find the whole implementation at following <a className="text-blue-700" href='https://github.com/zarathustracode/Linear-Response-of-LIF-neurons'>Github repository</a>.
+        You can find the entire implementation in the following <a className="text-blue-700" href='https://github.com/zarathustracode/Linear-Response-of-LIF-neurons'>Github repository</a>.
         </p>
         <br></br>
         <figure className="relative w-4/5 m-auto">
@@ -108,10 +108,11 @@ const NeuralResponse = () => {
             layout={ {
               autosize: true,
               title: 'Equilibrium distribution of LIF neuron',
-              xaxis: {title: "Membrane Potential", showgrid: false, zeroline: false},
+              xaxis: {title: "Membrane Potential", showgrid: false, zeroline: false, range: [0,20]},
               yaxis: {title: "Probability", showgrid: false, zeroline: false},
               yaxis2: {title: "Flux", showgrid: false, zeroline: false, side: 'right',overlaying: 'y'},
-              legend : { x:1, y:0 }, } }
+              legend : { x:1, y:0 },
+            } }
             config={ {scrollZoom: true, editable: true, displayModeBar: false, responsive: true} }
             useResizeHandler={true}
             style={{width: '100%', height: '100%'}}
@@ -200,7 +201,13 @@ const NeuralResponse = () => {
                   mean = data['mean']
                   variance = data['variance']
 
-                  V,P0,J0,r0 = LIF0(tau=tau_mem,mu=mean,sig=variance,Vth=V_th, Vresting=V_resting,Vre=V_reset,tau_ref=t_ref)
+                  V,P0,J0,r0 = LIF0(
+                    tau=tau_mem, 
+                    mu=mean,
+                    sig=variance,
+                    Vth=V_th, 
+                    Vresting=V_resting,
+                    Vre=V_reset,tau_ref=t_ref)
 
                   return {
                           'membrane potential values': list(V),
@@ -243,11 +250,19 @@ const NeuralResponse = () => {
                 layout={ {
                   autosize: true,
                   title: 'Equilibrium distribution of LIF neuron',
-                  xaxis: {title: "Membrane Potential", showgrid: false, zeroline: false},
-                  yaxis: {title: "Probability", showgrid: false, zeroline: false},
-                  yaxis2: {title: "Flux", showgrid: false, zeroline: false, side: 'right',overlaying: 'y'},
+                  xaxis: {
+                    title: "Membrane Potential", showgrid: false, zeroline: false
+                  },
+                  yaxis: {
+                    title: "Probability", showgrid: false, zeroline: false
+                  },
+                  yaxis2: {
+                    title: "Flux", showgrid: false, zeroline: false, side: 'right',overlaying: 'y'
+                  },
                   legend : { x:1, y:0 }, } }
-                config={ {scrollZoom: true, editable: true, displayModeBar: false, responsive: true} }
+                config={
+                   {scrollZoom: true, editable: true, displayModeBar: false, responsive: true} 
+                  }
                 useResizeHandler={true}
                 style={{width: '100%', height: '100%'}}
               />

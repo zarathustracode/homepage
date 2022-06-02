@@ -29,6 +29,10 @@ const Homeaostasis = () => {
         for better understanding the process of memory formation.
       </p>
       <br></br>
+      <p className="text-lg text-gray-900">
+      You can find the entire implementation in the following <a className="text-blue-700" href='https://github.com/zarathustracode/Linear-Response-of-LIF-neurons'>Github repository</a>.
+      </p>
+      <br></br>
       <figure className="relative w-4/5 m-auto">
         <img src={pic} className="relative w-full" />
         <figcaption className="text-lg text-gray-900">
