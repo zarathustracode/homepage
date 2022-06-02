@@ -29,7 +29,7 @@ const Homeaostasis = () => {
         for better understanding the process of memory formation.
       </p>
       <br></br>
-      <figure>
+      <figure className="relative w-4/5 m-auto">
         <img src={pic} className="relative w-full" />
         <figcaption className="text-lg text-gray-900">
         Formation of memory engrams in a neuronal network with homeostatic
