@@ -75,7 +75,7 @@ const Homeaostasis = () => {
          but of scar tissue, which grows further by repeating the procedure. Therefore, the memory of the system nothing else but a ``scar'' left by sensory experience.
           We think that this is a good metaphor for the type of memories described in our paper,
            formed through homeostatically controlled structural plasticity.
-            Interestingly, this model was originally meant as a model for rewiring after lesion <cite className="text-blue-700 not-italic"><a href="https://doi.org/10.3389/fnana.2014.00115">Butz2013</a></cite>.
+            Interestingly, this model was originally meant as a model for rewiring after lesion <cite className="text-blue-700 not-italic"><a href="https://doi.org/10.3389/fnana.2014.00115">Butz et al. 2013</a></cite>.
              In our work, however, the ``lesion'' is imposed by stimulation, which induces phenomena similar to scar formation. 
              The dynamics of this healing process is very universal, where resources from the whole network are used to fix a local problem leading to a scar.
               A perturbation introduces heterogeneity in a previously homogeneous organic substrate.
