@@ -47,7 +47,7 @@ const Navbar = () => {
               {
                   navigation.map(
                     (item, index) => (
-                        <Link key={index} to={item.href}>
+                        <Link key={index} to={item.href} onClick={() => setIsNavOpen((prev) => !prev)}>
                         <div className=" text-center text-gray-300 hover:bg-gray-700 px-3 py-2 text-xl hover:text-white delay-100">
                           {item.name}
                           </div>
